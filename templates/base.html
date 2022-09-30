@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    <link rel="script" href="{{ url_for('static', filename='code.js')}}">
+
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+    {% if temp > 10.0 %}
+        <div id="weatherGood"> The weather is good enough for you to paint. The temperature is {{ temp }}°C around Manchester, which is good for painting.</div>
+    {% else %}
+        <div id="weatherBad"> The weather is very bad for you to paint. The temperature is {{ temp }}°C around Manchester, which is too low. </div>
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
