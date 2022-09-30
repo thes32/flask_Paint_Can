@@ -20,8 +20,8 @@ def admin():
 
 def getWeatherReport():
     WEATHERAPI_URL = "https://api.openweathermap.org/data/2.5/weather?"
-    API_KEY = "0f09096e442eb490b11b317b45ba9e82"
-    CITY = "Manchester"
+    API_KEY = ""
+    CITY = "London
 
     url = WEATHERAPI_URL + "appid=" + API_KEY + "&q=" + CITY
 
